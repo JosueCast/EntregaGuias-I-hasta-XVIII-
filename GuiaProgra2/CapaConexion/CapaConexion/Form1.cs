@@ -143,7 +143,11 @@ namespace CapaConexion
             MessageBox.Show($"Filas actualizadas = {actualizadas}");
         }
 
-
-
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string Id = tboxCustomerID.Text;
+            var eliminado = customersRepository.EliminarCliente(Id);
+            MessageBox.Show("Fila Eliminadas = " + eliminado);
+        }
     }
 }
